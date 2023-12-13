@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Layout from './components/common/Layout/Layout';
-
+import Layout from './common/Layout/Layout';
 import ProtectedRoute from './utils/ProtectedRoute';
 
 import News from './pages/News/News';
@@ -11,12 +10,11 @@ import Contact from './pages/Contact/Contact';
 
 import Login from './components/Authentication/Login/Login';
 import Signup from './components/Authentication/Signup/Signup';
-
 import Dashboard from './components/Authentication/DashBoard/DashBoard';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import './App.css';
+
 
 function App() {
     return (
