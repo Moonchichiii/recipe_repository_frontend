@@ -7,7 +7,7 @@ const Layout = ({ children }) => (
   <>
     <NavBar />
     <AuthNavbar />
-    {children}
+    <main>{children}</main> 
     <Footer />
   </>
 );

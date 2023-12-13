@@ -94,11 +94,48 @@ p {
 
 
 main {
-    display:flex;
-    justify-content: center;    
-    align-items: center;
-    padding: 20px;
     background-color: var(--body-bkg);
     max-width: 90%; 
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
   }
+
+
+  .diagonal {  
+    margin: auto;
+    --skew-angle: +9deg; 
+    background:       
+       linear-gradient(90deg, 
+         rgba(2,0,36,1) 0%, 
+         rgba(73,9,121,1) 35%, 
+         rgba(196,0,255,1) 100%);  
+    height: 60vh;  
+    transform: skewY(var(--skew-angle));
+    transform-origin:left top bottom bottom;
+  }
+  
+  .wrapper {
+    margin: auto;
+    padding: 1rem;
+    text-align:left;
+    transform: skewY(calc(var(--skew-angle) * -1));
+   
+  }
+  
+  
+  .site-title, .section-title {
+    text-align: left;
+    color: white;
+  }
+  
+  .site-title {
+    padding: 1rem 0;
+  }
+  
+  .section-title {
+    font-size: 2.25rem;
+  }
+  
