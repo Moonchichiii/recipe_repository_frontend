@@ -15,9 +15,10 @@ function NavBar() {
                 <Navbar.Toggle aria-controls="navbarSupportedContent" />
                 <Navbar.Collapse id="navbarSupportedContent">
                     <Nav className="me-auto mb-2 mb-lg-0">
-                        <NavDropdown title="Menu" id="basic-nav-dropdown">
-                            <NavDropdown.Item as={Link} to="/dashboard">Home</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/top-rated">Top Rated</NavDropdown.Item>
+                        <NavDropdown title="Menu" id="basic-nav-dropdown">                            
+                            <NavDropdown.Item as={Link} to="/contact">News</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/about">About</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/contact">Contact</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Form className="d-flex d-lg-none me-2 searchbar" role="search">

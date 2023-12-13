@@ -1,0 +1,12 @@
+.buttonStyle {
+    margin-top:5px;
+    border: none;
+    background-color: var(--button-bkg);
+    color: var(--button-text);
+    font-family: var(--ff-primary)!important;
+}
+
+.buttonStyle:hover {
+    background-color: var(--button-bkg-hover);
+    color: var(--button-text-hover);
+}
