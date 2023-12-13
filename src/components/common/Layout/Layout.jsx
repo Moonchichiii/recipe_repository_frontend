@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './';
+import Navbar from './Navbar/Navbar';
 import AuthNavbar from './Authentication/AuthNavbar/AuthNavbar';
 import Footer from './Footer/Footer';
 

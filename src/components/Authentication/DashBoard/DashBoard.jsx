@@ -1,5 +1,5 @@
-function Dashboard() {
-    
+function DashBoard() 
+{    
 }
 
 export default DashBoard;

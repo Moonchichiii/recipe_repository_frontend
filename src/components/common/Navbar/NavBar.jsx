@@ -1,5 +1,5 @@
 import { Navbar, Nav, Form, FormControl, Button, NavDropdown, Container } from 'react-bootstrap';
-import styles from './Navbar.module.css';
+import styles from './NavBar.module.css';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
