@@ -77,10 +77,10 @@ function ProfileCreation() {
                 <div className={styles.profileCard}>
                     <div className={styles.profileImage}>
                         <img
-                            src={user?.profileImage || import.meta.env.VITE_DEFAULT_PROFILE_IMAGE
-                            }
+                            src={user?.profileImage || import.meta.env.VITE_DEFAULT_PROFILE_IMAGE}
                             alt="Profile"
                         />
+
                     </div>
                     <div className={styles.profileBody}>
                         <h2>Your Profile</h2>

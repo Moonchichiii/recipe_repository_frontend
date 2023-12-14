@@ -20,9 +20,9 @@ function AuthNavbar() {
                             // Displaying username, navigationbar signup/login/logout. 
                     <>
                         <div className="me-5 welcome-user-navbar">Welcome, {user.username}!</div>
-                                                                       
-                        <Link to="/post"  role={button} className={'outline-primary btn-sm me-2'}>Post Recipe</Link>
-                        <Link to="/profile" role={button} className={'outline-primary btn-sm me-2'}>Edit Profile</Link>
+                                                                      
+                        <Link to="/post" className={'outline-primary btn-sm me-2'}>Post Recipe</Link>
+                        <Link to="/profile" className={'outline-primary btn-sm me-2'}>Edit Profile</Link>
                         <LogOut /> 
                         
                     </>
