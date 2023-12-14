@@ -1,0 +1,93 @@
+.imageContainer {
+    max-width: 90%;
+    margin: auto;
+    height: 100%;
+ 
+}
+
+.myGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2%;
+    margin: 5% 0;
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardImage {
+    width: 100%;
+    height: 200px; 
+    overflow: hidden;
+}
+
+.cardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardBody {
+    padding: var(--spacer);
+    flex-grow: 1; 
+}
+
+.cardTitle {
+    font-family: var(--ff-secondary);
+    font-weight: 700;
+    font-size: var(--fs-large);
+    margin-bottom: var(--spacer);
+}
+
+.cardBody p, button {
+    font-weight: 500;
+    font-size: var(--fs-medium);
+}
+
+button {
+    background: var(--button-bkg);
+    color: var(--button-text);
+    border: none;
+    padding:5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+button:hover {
+    background-color: var(--button-bkg-hover);
+}
+
+
+@media only screen and (max-width: 1441px) {
+    .imageContainer { max-width: 80%; }
+}
+
+@media only screen and (min-width: 1441px) {
+    .myGrid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+        justify-content: center; 
+    }
+
+    .card {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .myGrid { grid-template-columns: 1fr; }
+    .navbar .d-flex.align-items-center > button,
+    .navbar .d-flex.align-items-center > a.btn {
+    margin: var(--spacer) var(--spacer) var(--spacer) 0;    
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .cardBody { padding: 7px; }
+    .cardTitle, .cardBody p, button { font-size: var(--fs-small); }
+}
