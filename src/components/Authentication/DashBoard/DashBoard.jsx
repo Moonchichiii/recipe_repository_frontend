@@ -3,9 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Contexts/AuthContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
-
-
-import styles from '/workspaces/recipe_repository_frontend/src/components/Authentication/DashBoard/DashBoard.module.css';
+import styles from './DashBoard.module.css';
 
 
 function Dashboard() {
