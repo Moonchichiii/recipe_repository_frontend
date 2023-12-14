@@ -4,7 +4,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import { AuthContext } from '../Contexts/AuthContext';
 import { login, setAuthToken } from '../../../service/Api/Api';
 
-function Login() {
+function Login({ closeModal }) {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -15,16 +15,14 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         login(username, password)
-        .then(response => {
-            const { token } = response.data;
-            localStorage.setItem('token', token);
-            setAuthToken(token);
-                handleLogin(response.data);                
+            .then(response => {
+                const { token } = response.data;
+                localStorage.setItem('token', token);
+                setAuthToken(token);
+                handleLogin(response.data);
                 navigate('/dashboard');
                 closeModal();
             })
-
-
             .catch(error => {
                 if (error.response && error.response.data) {
                     setError(error.response.data);
@@ -32,47 +30,46 @@ function Login() {
                     setError({ general: 'An error occurred!' });
                 }
             });
-        };
-    
+    };
 
     return (
-        <div className="form-container">                         
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Group className="md-3" controlId="formBasicUsername">
-                            <Form.Label>Username</Form.Label>
-                            <Form.Control
-                                type="text"
-                                placeholder="Enter username"
-                                value={username}
-                                onChange={e => setUsername(e.target.value)}
-                            />
-                           {error.username && error.username.map((message, idx) => (
+        <div className="form-container">
+            <Form onSubmit={handleSubmit}>
+                <Form.Group className="md-3" controlId="formBasicUsername">
+                    <Form.Label>Username</Form.Label>
+                    <Form.Control
+                        type="text"
+                        placeholder="Enter username"
+                        value={username}
+                        onChange={e => setUsername(e.target.value)}
+                    />
+                    {error.username && error.username.map((message, idx) => (
                         <Alert key={idx} variant="danger">{message}</Alert>
                     ))}
-                        </Form.Group>
+                </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control
-                                type="password"
-                                placeholder="Password"
-                                value={password}
-                                onChange={e => setPassword(e.target.value)}
-                            />
-                              {error.password && error.password.map((message, idx) => (
-                            <Alert key={idx} variant="danger">{message}</Alert>
-                            ))}
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control
+                        type="password"
+                        placeholder="Password"
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                    />
+                    {error.password && error.password.map((message, idx) => (
+                        <Alert key={idx} variant="danger">{message}</Alert>
+                    ))}
 
-                             {error.general && <Alert variant="danger">{error.general}</Alert>}
+                    {error.general && <Alert variant="danger">{error.general}</Alert>}
 
-                            </Form.Group>
+                </Form.Group>
 
-                        <Button variant="primary" type="submit">
-                            Login
-                        </Button>
-                    </Form>
-                   
-                </div>            
+                <Button variant="primary" type="submit">
+                    Login
+                </Button>
+            </Form>
+
+        </div>
     );
 }
 

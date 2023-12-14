@@ -20,7 +20,7 @@ function LoginModal() {
                     <Modal.Title>Login</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <LoginForm />
+                <LoginForm closeModal={handleClose} />
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
