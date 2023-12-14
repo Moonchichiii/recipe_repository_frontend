@@ -71,7 +71,7 @@ function LandingPage() {
 
                     <h2 className="section-title">Post your own recipes!</h2>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
                 </div>
 
