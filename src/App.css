@@ -6,6 +6,7 @@
     --button-text: #FFFFFF;
     --search-button-bkg: #3a3a3a;
     --search-button-hover: #7a7a7a;
+    --landingpage-text: #FFFFFF;
     --post-title: #3a3a3a;
     --post-text: #4a4a4a;
 
@@ -117,6 +118,7 @@ main {
     height: 60vh;  
     transform: skewY(var(--skew-angle));
     transform-origin:left top bottom bottom;
+    color:var(--landingpage-text);
   }
   
   .wrapper {

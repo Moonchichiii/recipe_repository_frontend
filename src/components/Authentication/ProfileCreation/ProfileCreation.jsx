@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../Contexts/AuthContext";
+import { Button } from 'react-bootstrap';
 import styles from "../ProfileCreation/ProfileCreation.module.css";
 
 function ProfileCreation() {
@@ -76,8 +77,8 @@ function ProfileCreation() {
             <form onSubmit={handleSubmit}>
                 <div className={styles.profileCard}>
                     <div className={styles.profileImage}>
-                        <img
-                            src={user?.profileImage || import.meta.env.VITE_DEFAULT_PROFILE_IMAGE}
+                        <img src={user?.profileImage || 
+                        import.meta.env.VITE_DEFAULT_PROFILE_IMAGE}
                             alt="Profile"
                         />
 
@@ -117,7 +118,7 @@ function ProfileCreation() {
                                 type="button"
                                 disabled={isLoading}
                                 onClick={handleSkip}
-                                className={styles.skipBtn}
+                                className={styles.saveBtn}
                             >
                                 Skip
                             </button>

@@ -23,6 +23,8 @@ function Login() {
                 navigate('/dashboard');
                 closeModal();
             })
+
+
             .catch(error => {
                 if (error.response && error.response.data) {
                     setError(error.response.data);
@@ -30,7 +32,8 @@ function Login() {
                     setError({ general: 'An error occurred!' });
                 }
             });
-    };
+        };
+    
 
     return (
         <div className="form-container">                         
@@ -43,9 +46,9 @@ function Login() {
                                 value={username}
                                 onChange={e => setUsername(e.target.value)}
                             />
-                            {error.username?.map((message, idx) => (
-                            <Alert key={idx} variant="danger">{message}</Alert>      
-                            ))}                        
+                           {error.username && error.username.map((message, idx) => (
+                        <Alert key={idx} variant="danger">{message}</Alert>
+                    ))}
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -56,10 +59,12 @@ function Login() {
                                 value={password}
                                 onChange={e => setPassword(e.target.value)}
                             />
-                              
-                               {error.password?.map((message, idx) => (
-                            <Alert key={idx} variant="danger">{message}</Alert>                            
+                              {error.password && error.password.map((message, idx) => (
+                            <Alert key={idx} variant="danger">{message}</Alert>
                             ))}
+
+                             {error.general && <Alert variant="danger">{error.general}</Alert>}
+
                             </Form.Group>
 
                         <Button variant="primary" type="submit">

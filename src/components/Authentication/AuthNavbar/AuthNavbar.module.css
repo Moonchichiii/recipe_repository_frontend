@@ -1,14 +1,12 @@
 .buttonStyle {
-    margin-top:5px;
-    border: none;
-    background-color: var(--button-bkg);
-    color: var(--button-text);
+    background-color: var(--button-bkg)!important; 
+    color: var(--button-text)!important; 
     font-family: var(--ff-primary)!important;
 }
 
-.buttonStyle:hover {
-    background-color: var(--button-bkg-hover);
-    color: var(--button-text-hover);
+.buttonStyle:hover {    
+    background-color: var(--button-bkg-hover)!important; 
+    color: var(--button-text)!important; 
 }
 
 .user-display {

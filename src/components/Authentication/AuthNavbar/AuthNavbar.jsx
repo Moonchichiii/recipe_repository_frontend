@@ -19,10 +19,13 @@ function AuthNavbar() {
                 {isAuthenticated ? ( 
                             // Displaying username, navigationbar signup/login/logout. 
                     <>
-                        <div className="me-5 welcome-user-navbar">Welcome, {user.username}!</div>
-                                                                      
-                        <Link to="/post" className={'outline-primary btn-sm me-2'}>Post Recipe</Link>
-                        <Link to="/profile" className={'outline-primary btn-sm me-2'}>Edit Profile</Link>
+                        <div className="me-1 welcome-user-navbar">Welcome, {user.username}!</div>
+                        
+                        <Link to="/post" className={`${styles.buttonStyle} btn btn-sm me-1`}>Post Recipe</Link>
+                        <Link to="/profile" className={`${styles.buttonStyle} btn btn-sm me-1`}>Edit Profile</Link>
+
+                      
+                        
                         <LogOut /> 
                         
                     </>
