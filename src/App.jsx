@@ -9,18 +9,21 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Login from './components/Authentication/Login/Login';
 import Signup from './components/Authentication/Signup/Signup';
+import AuthNavbar from './components/Authentication/AuthNavbar/AuthNavbar';
 import Dashboard from './components/Authentication/DashBoard/DashBoard';
+import { AuthProvider } from './components/Authentication/Contexts/AuthContext';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
     return (
+        <AuthProvider>
         <Router>
             <Layout>
                 <div className="main">
                     <Routes>
-                        <Route path="/" element={<LandingPage />} />
+                        <Route path="/" element={<LandingPage />} />                        
                         <Route path="/login" element={<Login />} />
                         <Route path="/signup" element={<Signup />} />
                         <Route path="/news" element={<News />} />
@@ -35,6 +38,8 @@ function App() {
                 </div>
             </Layout>
         </Router>
+        </AuthProvider>
+        
     );
 }
 
