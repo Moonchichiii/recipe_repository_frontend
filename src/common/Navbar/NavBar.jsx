@@ -1,12 +1,28 @@
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../components/Authentication/Contexts/AuthContext';
 import { Navbar, Nav, Form, FormControl, Button, NavDropdown, Container } from 'react-bootstrap';
 import styles from './NavBar.module.css';
-import { Link } from 'react-router-dom';
+
 
 function NavBar() {
+    const { isAuthenticated } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
+    const handleBrandClick = (e) => {
+        if (!isAuthenticated) {
+            e.preventDefault();
+            navigate('/');
+        }
+
+    };
+
     return (
         <Navbar bg="light" expand="lg">
-            <Container fluid>
-                <Navbar.Brand as={Link} to="/dashboard">
+            <Container fluid>            
+                <Navbar.Brand as={Link} to="/dashboard" onClick={handleBrandClick}>
                     <div className="col-md-8">
                         <h1 className="header-title">Recipe Repository</h1>
                         <p className="header-tagline">Join us on an adventure</p>

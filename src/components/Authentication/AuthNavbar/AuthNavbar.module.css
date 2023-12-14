@@ -10,3 +10,13 @@
     background-color: var(--button-bkg-hover);
     color: var(--button-text-hover);
 }
+
+.user-display {
+    margin: 15px 15px 15px 0;
+}
+
+.welcome-user-navbar {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-large);
+    font-weight: 500;
+}

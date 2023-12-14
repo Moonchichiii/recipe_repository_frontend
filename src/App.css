@@ -23,11 +23,19 @@
     --spacer: 1rem;
 }
 
+
+*,::before,*,::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--ff-primary);
     background-color: var(--body-bkg);
     color: var(--post-text);
     margin: 0;
+    padding: 0;
     min-height: 100vh;
     line-height: 1.5;
 }
@@ -49,22 +57,6 @@ p {
 }
 
 
-.user-display {
-    margin: 15px 15px 15px 0;
-}
-
-.welcome-user-navbar {
-    font-family: var(--ff-primary);
-    font-size: var(--fs-large);
-    font-weight: 500;
-}
-
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1020; 
-  }
-  
 
 
 /* Form Layout */
@@ -82,6 +74,16 @@ p {
 }
 
 /* Main Layout */
+
+
+.navbars-container {
+    position: sticky;
+    top: 0;
+    z-index: 1020; 
+    width: 100%;
+    margin:0;
+  } 
+
 
 .header-title {
     font-family: var(--ff-secondary);
