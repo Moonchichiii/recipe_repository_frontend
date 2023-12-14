@@ -39,8 +39,8 @@
 ----------
 
 ## Technologies Used
-
-- React.js
+ 
+- Vite + React.js
 - Bootstrap
 - Axios 
 
@@ -90,7 +90,7 @@
 ----------
 
 ## Credits & Tutorials
-
+- https://react-bootstrap.netlify.app/docs/components/modal/ ***got most of my components from here*** 
 - https://medium.com/@cole_ruche/uploading-images-to-rest-api-backend-in-react-js-b931376b5833
 - https://dayvster.com/blog/use-context-for-auth  *** I Got the ideas for the AuthContext here! ***
 - https://react-bootstrap.netlify.app/docs/forms/overview/ *** Form examples handy! ***

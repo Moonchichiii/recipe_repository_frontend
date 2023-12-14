@@ -14,16 +14,14 @@ export const AuthProvider = ({ children }) => {
 
     // user registration
   const handleRegister = (userData) => {
-    setIsAuthenticated(true);
-    console.log(userData);
+    setIsAuthenticated(true);    
     setUser(userData);
     
   };
 
     // user login
   const handleLogin = (userData) => {
-    setIsAuthenticated(true);
-    console.log(userData)
+    setIsAuthenticated(true);    
     setUser(userData);
     
   };

@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './common/Layout/Layout';
 import ProtectedRoute from './utils/ProtectedRoute';
 
+import LoginModal from './components/Authentication/Login/Login';
+
+import SignUpModal from './components/Authentication/SignUp/SignUp';
 
 import { AuthProvider } from './components/Authentication/Contexts/AuthContext';
 
@@ -28,8 +31,9 @@ function App() {
                     <div className="main">
                         <Routes>
                             <Route path="/" element={<LandingPage />} />
-                            <Route path="/login" element={<Login />} />
-                            <Route path="/signup" element={<Signup />} />
+                            <Route path="/login" element={<LoginModal />} />
+                            <Route path="/signup" element={<SignUpModal />} />                            
+                            
                             <Route path="/news" element={
                                 <Suspense fallback={<div className="d-flex justify-content-center align-items-center"><h3>Loading...</h3></div>}><News /></Suspense>
                             } />
