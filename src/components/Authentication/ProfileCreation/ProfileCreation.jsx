@@ -47,17 +47,17 @@ function ProfileCreation() {
 
         try {
 
-            const response = await fetch(
-                `${import.meta.env.VITE_PHOTO_URL}`,
-                {
-                    method: "PATCH",
-                    headers: {
-                        Authorization: `Token ${localStorage.getItem("token")}`,
-                    },
-                    body: formDataToSend,
-                }
-            );
-
+            const response = await fetch(`${import.meta.env.VITE_PHOTO_URL}`, {
+                
+                method: "PATCH",
+                headers: {
+                    'Authorization': `Token ${localStorage.getItem('token')}`,
+               
+                },
+                body: formDataToSend,
+                
+            });
+            console.log(import.meta.env.VITE_PHOTO_URL); 
             const data = await response.json();
 
             if (response.ok) {
